@@ -26,6 +26,7 @@ public class Main {
     public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
     public static final String QUIT_MSG = "Goodbye!";
     public static final String COMMAND_ERROR = "Unknown command.";
+    public static final String PHONE_NOT_EXIST = "Phone number does not exist.";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -76,6 +77,15 @@ public class Main {
     }
 
     private static void getContact(Scanner in, ContactBook cBook) {
+        int phone;
+        String name;
+
+        phone = in.nextInt(); in.nextLine();
+        name = cBook.giveNameByNumber(phone);
+        if (name != null)
+            System.out.println(name);
+        else
+            System.out.println(PHONE_NOT_EXIST);
     }
 
     private static String getCommand(Scanner in) {
