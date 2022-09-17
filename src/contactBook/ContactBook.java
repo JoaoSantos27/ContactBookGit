@@ -93,6 +93,8 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+
+    //This function gives the name associated by the phone number
     public String giveNameByNumber(int phone) {
         for (int i = 0; i < counter; i++) {
             if (contacts[i].getPhone() == phone)
