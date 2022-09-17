@@ -99,7 +99,7 @@ public class ContactBook {
                 return contacts[i].getName();
 
         }
-        return "Phone number does not exist.";
+        return null;
     }
 
 }
