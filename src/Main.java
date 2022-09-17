@@ -55,6 +55,12 @@ public class Main {
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
                     break;
+                case GET_CONTACT:
+                    getContact(in, cBook);
+                    break;
+                case EXIST_PHONE:
+                    existPhone(in, cBook);
+                    break;
                 default:
                     System.out.println(COMMAND_ERROR);
             }
@@ -64,6 +70,12 @@ public class Main {
         System.out.println(QUIT_MSG);
         System.out.println();
         in.close();
+    }
+
+    private static void existPhone(Scanner in, ContactBook cBook) {
+    }
+
+    private static void getContact(Scanner in, ContactBook cBook) {
     }
 
     private static String getCommand(Scanner in) {
