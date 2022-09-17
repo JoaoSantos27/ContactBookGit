@@ -61,17 +61,18 @@ public class ContactBook {
     }
 
     public boolean sameNumberContacts (){
-        boolean result = false;
+        if (counter < 2){
+            return false;
+        }
         for (int i=0;i<counter-1; i++){
-            int j;
-            for (j=1; j<counter; j++);{
+            for (int j=i+1; j<counter; j++){
                 if (contacts[i].getPhone() == contacts[j].getPhone()){
-                    result = true;
+                    return true;
                 }
             }
 
         }
-        return result;
+        return false;
     }
 
     private int searchIndex(String name) {
